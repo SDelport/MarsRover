@@ -1,0 +1,45 @@
+.simulation-container {
+    width: 100%;
+    height: calc(100% - 0px);
+    .controls {
+        width: 300px;
+        color:#fff;
+
+        .input-container {
+            height: 75%;
+            padding: 5px;
+            overflow: hidden auto;
+            background-color: #272727;
+
+            .rover-container{
+                border:1px solid #FF652F;
+                border-radius: 5px;
+                margin-top:5px;
+                padding: 5px;
+            }
+        }
+
+        .output-container {
+            height: 25%;
+            background-color: #272727;
+        }
+    }
+
+    .simulation {
+        background-color: #272727;
+        .spinner-grow{
+            width: 5rem;
+            height: 5rem;
+            background-color: #14A76C;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-top:-2.5rem;
+            margin-left:-2.5rem;
+        }
+    }
+}
+
+//#FF652F
+//#FFE400
+//#14A76C
