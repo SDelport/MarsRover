@@ -1,0 +1,50 @@
+<div class="d-flex simulation-container">
+    <div class="simulation flex-fill">
+
+        <div *ngIf="loading" class="spinner-grow">
+        </div>
+
+        <div class="grid"></div>
+
+
+    </div>
+    <div class="controls d-flex flex-column">
+        <div class="input-container flex-fill">
+            <h4>Input:</h4>
+            <label>Upper Right X</label>
+            <input [(ngModel)]="topX" class="form-control mb-2" />
+            <label>Upper Right Y</label>
+            <input [(ngModel)]="topY" class="form-control mb-2" />
+            <h5>Rovers:</h5>
+            <button (click)="addRover()" class="btn btn-primary w-100">Add Rover</button>
+            <div *ngFor="let rover of inputRovers">
+                <div class="rover-container">
+                    <div class="row">
+                        <div class="col">
+                            <label>X</label>
+                            <input [(ngModel)]="rover.x" class="form-control mb-2" />
+                        </div>
+                        <div class="col">
+                            <label>Y</label>
+                            <input [(ngModel)]="rover.y" class="form-control mb-2" />
+                        </div>
+                    </div>
+                    <label>Direction</label>
+                    <select class="form-control mb-2" [(ngModel)]="rover.direction">
+                        <option [ngValue]="'N'">N (North)</option>
+                        <option [ngValue]="'W'">W (West)</option>
+                        <option [ngValue]="'S'">S (South)</option>
+                        <option [ngValue]="'E'">E (East)</option>
+                    </select>
+                    <label>Instruction</label>
+                    <input [(ngModel)]="rover.instruction" class="form-control" />
+                </div>
+            </div>
+            <button (click)="runSimulation()" class="btn btn-primary mt-2 w-100">Run Simulation</button>
+        </div>
+        <div class="output-container flex-fill">
+            <h4>Output:</h4>
+            <pre>{{output}}</pre>
+        </div>
+    </div>
+</div>
