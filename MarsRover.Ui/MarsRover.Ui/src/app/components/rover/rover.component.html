@@ -1,0 +1,12 @@
+<div class="rover" [style.left]="(x*gridSize)+'px'" [style.top]="(y*gridSize)+'px'" [style.width]="gridSize+'px'"
+    [style.height]="gridSize+'px'" [style.transitionDuration]="moveTime+'s'"
+    [style.transform]="'rotate('+rotation+'deg)'">
+    <div class="body"></div>
+    <div class="satelite"></div>
+</div>
+<div *ngFor="let part of trail; let i = index">
+    <div [style.left]="(part.x*gridSize + gridSize/4)+'px'" [style.top]="(part.y*gridSize + gridSize/4)+'px'"
+        [style.width]="gridSize/2+'px'" [style.height]="gridSize/2+'px'"
+        [style.transform]="'rotate('+part.rotation+'deg)'"  [style.transitionDuration]="moveTime+'s'" [style.opacity]="(100/trailLength * i) +((trailLength -trail.length)*100)+'%'" class="trail"></div>
+
+</div>

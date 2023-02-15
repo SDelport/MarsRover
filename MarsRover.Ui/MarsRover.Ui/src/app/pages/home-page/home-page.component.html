@@ -1,0 +1,33 @@
+<div class="container pt-5">
+
+    <h1 class="text-center">Mars Rover</h1>
+
+    <h2 class="text-center">What is this?</h2>
+
+    <p class="text-center">
+        An implementation of this Google Code question
+    </p>
+
+    <p class="text-center mb-5">The full source is on GitHub here</p>
+
+    <h2 class="text-center mb-5">Try it</h2>
+
+    <div class="row ps-5 pe-5">
+        <div class="col-lg-4 ps-5 pe-5 mb-3">
+            <button class="btn btn-primary w-100" (click)="loadLevel(1)">Original</button>
+        </div>
+        <div class="col-lg-4 ps-5 pe-5 mb-3">
+            <button class="btn btn-secondary w-100">Level Select</button>
+        </div>
+        <div class="col-lg-4 ps-5 pe-5 mb-3">
+            <button class="btn btn-warning w-100">Sandbox</button>
+        </div>
+    </div>
+
+    <div class="rover"></div>
+
+</div>
+
+
+<rover [x]="roverX" [y]="roverY" [gridSize]="gridSize" [direction]="roverDirection"
+    [moveTime]="(moveMilliseconds/1000)+''"></rover>

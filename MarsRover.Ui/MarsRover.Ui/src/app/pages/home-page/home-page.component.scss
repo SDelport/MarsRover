@@ -1,0 +1,13 @@
+h1{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+body{
+    overflow: hidden;
+}
+
+h1,h2,h3,p,.btn{
+    z-index: 11;
+    position: relative;
+}

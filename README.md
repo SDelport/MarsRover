@@ -29,13 +29,12 @@ and the application will run on http://localhost:4200
 
 ## Todos
 
-Implement bounding (Rovers can go off plateau)
-Finish Simulation UI
-Abstract simulation logic to service
+Better Animation Handling
+Mobile Compatibility for simulation screen
 Object Calisthenics
-
-## Ideas:
-
-Implement simultaneous rovers with colision 
-Gameify
-Mobile compatibility
+Level Select
+Sandbox
+Different Services for different simulations
+Different Rover Types
+Better UI for simulation
+Implement Settings for deployments

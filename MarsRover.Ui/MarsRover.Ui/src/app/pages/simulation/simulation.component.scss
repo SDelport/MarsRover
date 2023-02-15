@@ -1,41 +1,46 @@
+@import "../../../variables.scss";
+
 .simulation-container {
     width: 100%;
     height: calc(100% - 0px);
+
     .controls {
         width: 300px;
-        color:#fff;
 
         .input-container {
             height: 75%;
             padding: 5px;
             overflow: hidden auto;
-            background-color: #272727;
 
-            .rover-container{
-                border:1px solid #FF652F;
+            .rover-container {
                 border-radius: 5px;
-                margin-top:5px;
+                border: 1px solid $info;
+                margin-top: 5px;
                 padding: 5px;
             }
         }
 
         .output-container {
             height: 25%;
-            background-color: #272727;
         }
     }
 
     .simulation {
-        background-color: #272727;
-        .spinner-grow{
+        .spinner-grow {
             width: 5rem;
             height: 5rem;
-            background-color: #14A76C;
             position: absolute;
-            left:50%;
-            top:50%;
-            margin-top:-2.5rem;
-            margin-left:-2.5rem;
+            background-color: $secondary;
+            left: 50%;
+            top: 50%;
+            margin-top: -2.5rem;
+            margin-left: -2.5rem;
+        }
+
+        .grid {
+            transition: all .5s;
+            background: linear-gradient(0deg, $error 2%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 98%,$error 98%, $error 100%), 
+            linear-gradient(90deg, $error 2%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 98%,$error 98%, $error 100%);
         }
     }
 }

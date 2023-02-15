@@ -1,0 +1,77 @@
+@import "../../../variables.scss";
+
+.rover {
+    transition-property: all;
+    transition-timing-function:linear;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 10;
+
+    .body {
+        position: absolute;
+        top: 5%;
+        left: 15%;
+        border-radius: 30% 30% 10% 10%;
+        width: 70%;
+        height: 90%;
+        background: repeating-linear-gradient(90deg, rgba(200,200,200,1) 0%, rgba(100,100,100,1) 100%);
+        background-size: 5% 5%;
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            height: 40%;
+            width: 20%;
+            background: repeating-linear-gradient(0deg, rgba(74,74,74,1) 0%, rgba(0,0,0,1) 100%);
+            background-size: 5% 5%;
+        }
+    }
+
+    .satelite {
+        position: absolute;
+        top: -20%;
+        left: 25%;
+        width: 50%;
+        height: 40%;
+        border-radius: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(33, 33, 33, 1) 100%);
+        box-shadow: 0 10px 15px 0px black;
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            top: 10%;
+            left: 47%;
+            width: 6%;
+            height: 40%;
+            background-color: #777;
+            box-shadow: 0 0px 5px 2px black;
+        }
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            width: 20%;
+            height: 20%;
+            border-radius: 100%;
+            background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(107, 0, 0, 1) 100%);
+        }
+
+
+    }
+}
+
+.trail{
+    position: absolute;
+    background-color: $primary;
+    box-shadow: 0px 0px 15px 2px $primary;
+    left:25%;
+    top:25%;
+    border-radius: 100%;
+    transition-property: opacity;
+}
