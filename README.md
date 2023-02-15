@@ -29,12 +29,12 @@ and the application will run on http://localhost:4200
 
 ## Todos
 
-Better Animation Handling
-Mobile Compatibility for simulation screen
-Object Calisthenics
-Level Select
-Sandbox
-Different Services for different simulations
-Different Rover Types
-Better UI for simulation
-Implement Settings for deployments
+* Better Animation Handling
+* Mobile Compatibility for simulation screen
+* Object Calisthenics
+* Level Select
+* Sandbox
+* Different Services for different simulations
+* Different Rover Types
+* Better UI for simulation
+* Implement Settings for deployments
